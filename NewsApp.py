@@ -25,7 +25,7 @@ def display_news(articles):
             st.write(f"**URL:** {chosen_article['url']}")
 
 API_KEY = '1d1d5237d98f465e84dd1c3fc9a75061'
-topics = ['Technology', 'Sports', 'Health', 'Business','India','World']
+topics = ['Technology', 'Sports', 'Health', 'Business','India','World','Gaming']
 
 st.title("News App")
 st.write("Select a topic to read news articles:")
