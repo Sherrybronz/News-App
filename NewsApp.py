@@ -15,13 +15,14 @@ def display_news(articles):
     for i, article in enumerate(articles, start=1):
         st.write(f"{i}. {article['title']}")
 
-    choice = st.selectbox("Select a news article to read:", [f"{i}. {article['title']}" for i, article in enumerate(articles, start=1)])
-    if choice:
-        chosen_article = articles[int(choice.split(".")[0]) - 1]
-        st.write(f"**Title:** {chosen_article['title']}")
-        st.write(f"**Description:** {chosen_article['description']}")
-        st.write(f"**Source:** {chosen_article['source']['name']}")
-        st.write(f"**URL:** {chosen_article['url']}")
+    choices = st.multiselect("Select news articles to read:", [f"{i}. {article['title']}" for i, article in enumerate(articles, start=1)])
+    if choices:
+        for choice in choices:
+            chosen_article = articles[int(choice.split(".")[0]) - 1]
+            st.write(f"**Title:** {chosen_article['title']}")
+            st.write(f"**Description:** {chosen_article['description']}")
+            st.write(f"**Source:** {chosen_article['source']['name']}")
+            st.write(f"**URL:** {chosen_article['url']}")
 
 API_KEY = '1d1d5237d98f465e84dd1c3fc9a75061'
 topics = ['technology', 'sports', 'health', 'business']
