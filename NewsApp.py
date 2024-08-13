@@ -22,13 +22,13 @@ def display_news(articles):
             st.write(f"**Title:** {chosen_article['title']}")
             st.write(f"**Description:** {chosen_article['description']}")
             st.write(f"**Source:** {chosen_article['source']['name']}")
-            st.write(f"**URL:** {chosen_article['url']}")
+            st.write(f"**URL:** [Read more]({chosen_article['url']})")
 
-API_KEY = '1d1d5237d98f465e84dd1c3fc9a75061'
-topics = ['Technology', 'Sports', 'Health', 'Business','India','World','Gaming']
+API_KEY = 'YOUR_API_KEY'  # Replace with your actual API key
+topics = ['Technology', 'Sports', 'Health', 'Business', 'India', 'World', 'Gaming']
 
 st.markdown(
-    f"""
+    """
     <style>
     body {
         background-image: url("https://wallpapers-clan.com/wallpapers/cute-anime-boy-art/");
@@ -46,4 +46,7 @@ topic = st.selectbox("Topic:", topics)
 
 if topic:
     articles = fetch_news(API_KEY, topic)
-    display_news(articles)
+    if articles:  # Check if articles are returned
+        display_news(articles)
+    else:
+        st.write("No articles found for this topic.")
