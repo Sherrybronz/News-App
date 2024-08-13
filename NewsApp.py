@@ -28,7 +28,7 @@ API_KEY = '1d1d5237d98f465e84dd1c3fc9a75061'
 topics = ['Technology', 'Sports', 'Health', 'Business','India','World','Gaming']
 
 st.markdown(
-    """
+    f"""
     <style>
     body {
         background-image: url("https://wallpapers-clan.com/wallpapers/cute-anime-boy-art/");
