@@ -31,7 +31,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+        background-image: url("https://wallpapers-clan.com/wallpapers/cute-anime-boy-art/");
         background-size: cover;
     }
     </style>
