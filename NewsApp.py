@@ -29,6 +29,17 @@ topics = ['Technology', 'Sports', 'Health', 'Business','India','World','Gaming']
 st.title("News App")
 st.write("Select a topic to read news articles:")
 
+st.write("""
+    <style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 topic = st.selectbox("Topic:", topics)
 
 if topic:
