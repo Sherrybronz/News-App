@@ -32,7 +32,7 @@ st.write("Select a topic to read news articles:")
 st.write("""
     <style>
     body {
-        background-image: url("Naruto.jpg");
+        image: url("Naruto.jpg");
         background-size: cover;
     }
     </style>
